@@ -43,4 +43,12 @@ export class LinkedList {
     }
     return counter; // it will always return for both cases, it's either 0 or any other size
   }
+  //head() should return the value of the first node in the list.
+  // If the list is empty, it should return undefined.
+  head() {
+    if (this.headNode === null) {
+      return undefined;
+    }
+    return this.headNode.value;
+  }
 }
