@@ -25,17 +25,35 @@ describe(
       const list = new LinkedList();
       expect(list.head()).toBe(undefined);
     });
-    test('Get the first Node in the list', () => {
+    test('Get the first value inside the first Node in the list', () => {
       const list = new LinkedList();
       list.append(33);
       expect(list.head()).toBe(33);
     });
-    test('Get the first Node in the list with more nodes', () => {
+    test('Get the first value inside the first Node in the list with more nodes', () => {
       const list = new LinkedList();
       list.append(33);
       list.append('fe');
       list.append(3245);
       expect(list.head()).toBe(33);
+    });
+  }),
+  describe('tail', () => {
+    test('Get undefined if the list is empty', () => {
+      const list = new LinkedList();
+      expect(list.tail()).toBe(undefined);
+    });
+    test('Get the last value inside the last Node in the list', () => {
+      const list = new LinkedList();
+      list.append(33);
+      expect(list.tail()).toBe(33);
+    });
+    test('Get the last value inside the last Node in the list with more nodes', () => {
+      const list = new LinkedList();
+      list.append(33);
+      list.append('fe');
+      list.append(3245);
+      expect(list.tail()).toBe(3245);
     });
   })
 );

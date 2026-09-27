@@ -43,12 +43,26 @@ export class LinkedList {
     }
     return counter; // it will always return for both cases, it's either 0 or any other size
   }
-  //head() should return the value of the first node in the list.
-  // If the list is empty, it should return undefined.
+
   head() {
     if (this.headNode === null) {
       return undefined;
     }
     return this.headNode.value;
+  }
+  //tail() should return the value of the final node in the list.
+  // If the list is empty, it should return undefined.
+  tail() {
+    if (this.headNode === null) {
+      return undefined;
+    }
+    let current = this.headNode; //point to the head
+
+    // search for the tail
+    while (current.nextNode !== null) {
+      current = current.nextNode;
+    }
+    // tail was found
+    return current.value;
   }
 }
