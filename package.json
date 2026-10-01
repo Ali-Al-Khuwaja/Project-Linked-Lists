@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "What did I do to make this template ?",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "test": "jest",
