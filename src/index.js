@@ -1,11 +1,12 @@
-import { LinkedList } from './LinkedList';
+import { LinkedList } from './LinkedList.js';
+
 const list = new LinkedList();
 
-list.append('A');
-list.append('B');
-list.append('C');
+list.append('dog');
+list.append('cat');
+list.append('parrot');
+list.append('hamster');
+list.append('snake');
+list.append('turtle');
 
-console.log(list.headNode);
-console.log(list.headNode.value);
-console.log(list.headNode.nextNode.value);
-console.log(list.headNode.nextNode.nextNode.value);
+console.log(list.toString());
